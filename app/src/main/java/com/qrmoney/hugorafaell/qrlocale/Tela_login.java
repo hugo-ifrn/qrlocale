@@ -74,7 +74,7 @@ public class Tela_login extends AppCompatActivity {
             Connection conn;
             try {
                 DriverManager.setLoginTimeout(5);
-                conn = DriverManager.getConnection("jdbc:postgresql://localhost/carteiraBD","postgres","root");
+                conn = DriverManager.getConnection("jdbc:postgresql://192.168.0.107/carteiraBD","postgres","root");
                 Statement st = conn.createStatement();
                 String sql;
                 sql = "SELECT * FROM \"cliente\" WHERE usuario = '" + mastername +"';";
